@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todos los usuarios</h1>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Nombre</td>
+            <td>Edad</td>
+            <td>Modificar</td>
+            <td>Eliminar</td>
+            <% usuarios.forEach((usuario)=>{ %>
+                <tr>
+                    <td><%= usuario.id %></td>
+                    <td><%= usuario.nombre %></td>
+                    <td><%= usuario.edad %></td>
+                    <td><a id="btn-modificar" href="/usuarios/modificar/<%= usuario.id %>">Modificar</a></td>
+                    <td><a id="btn-eliminar" href="/usuarios/eliminar/<%= usuario.id %>">Eliminar</a></td>
+                </tr>
+                <% }) %>
+        </tr>
+    </table>
+</body>
+</html>

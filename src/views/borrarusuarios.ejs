@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Borrando Usuario</h1>
+    <form action="/usuarios/eliminar/<%= usuario.id %>" method="post">
+        <h2>Desea eliminar usuario?</h2>
+        <a id="btn-modificar" href="/usuarios/todos">Cancelar</a>
+        <input id="btn-eliminar" type="submit" value="Borrar">
+    </form>
+</body>
+</html>
